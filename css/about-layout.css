@@ -38,3 +38,8 @@ span{
     display: flex;
     align-items: center;
 }
+.email{
+    color: beige;
+    font-family: 'Suthor', sans-serif;
+    margin-top: 5px;
+}
