@@ -5,5 +5,22 @@
 body{
     position: relative;
     padding: 5px;
+    min-height: 97vh;
+    min-width: 97vw;
     display: flex;
+    color: beige;
+    justify-content: center;
+}
+.canvas{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 40px;
+    font-family: 'Author', sans-serif;
+}
+.contents{
+    display: flex;
+    
 }
