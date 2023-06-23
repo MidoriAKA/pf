@@ -45,3 +45,14 @@ body{
 .tag{
     font-family: 'Supreme', sans-serif;
 }
+
+.canvas-after{
+    display: none;
+}
+
+.item{
+    display: none;
+}
+.item-afetr{
+    display: flex;
+}

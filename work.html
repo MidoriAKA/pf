@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/work.-layout.css">
     <link href="https://api.fontshare.com/v2/css?f[]=author@500&f[]=chillax@700&f[]=outfit@100&f[]=supreme@400&display=swap" rel="stylesheet">
-    <script src="js/script.js"></script>
+    <script src="js/items.js"></script>
     <title>WORK</title>
 </head>
 <body>
-    <div class="canvas">
+    <div id="canvas" class="canvas">
         <div class="title">
             <span>work's</span>
         </div>
         <div class="contents">
 
-            <div class="items n1" onclick="onClickITEM()">
+            <div id="n1" class="items n1" onclick="onClickITEM(1)">
                 <div class="item-title">
                     Nodon music video
                 </div>
                 <div class="thumb">
                     <a href="">
-                        <img src="img/">
+                        <img src="img/n1T.png">
                     </a>
                 </div>
                 <div class="tag">
@@ -30,13 +30,13 @@
                 </div>
             </div>
 
-            <div class="items n2">
+            <div id="n2" class="items n2" onclick="onClickITEM(2)">
                 <div class="item-title">
                     2
                 </div>
                 <div class="thumb">
                     <a href="">
-                        <img src="img/">
+                        <img src="img/n2T.png">
                     </a>
                 </div>
                 <div class="tag">
@@ -45,6 +45,9 @@
             </div>
 
         </div>
+    </div>
+    <div id="IDitem" class="item">
+        <iframe id="IDiframe" src="" class="frame"></iframe>
     </div>
 </body>
 </html>
