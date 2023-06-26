@@ -1,4 +1,4 @@
-function onClickITEM(itemNum) {
+function onClickITEM(ArticleNum) {
     // function getClassByID(elementID) {
     //     let element = document.getElementById(elementeID);
     //     if (element) {
@@ -10,7 +10,7 @@ function onClickITEM(itemNum) {
     // }
 
     let canvas = document.getElementById('canvas');
-    let item = document.getElementById('IDitem');
+    let article = document.getElementById('IDarticle');
     let iframe = document.getElementById('IDiframe');
     let n1 = document.getElementById('n1');
     let n2 = document.getElementById('n2');
@@ -18,18 +18,28 @@ function onClickITEM(itemNum) {
     // let CurrentClass = getClassByID();
 
     canvas.classList.toggle('canvas');
-    canvas.classList.toggle('canvas-after');
+    canvas.classList.toggle('canvas-after'); // ok
 
-    item.classList.toggle('item');
-    item.classList.toggle('item-after');
+    article.classList.toggle('article');
+    article.classList.toggle('article-after'); // ok
 
-    if (itemNum == '1') {
-        iframe.setAttribute('src', 'items/n1.html');
-    } else if (itemNum == '2') {
-        iframe.setAttribute('src', 'items/n2.html');
+    if (ArticleNum == '1') {
+        iframe.setAttribute('src', 'articles/n1.html');
+    } else if (ArticleNum == '2') {
+        iframe.setAttribute('src', 'articles/n2.html');
     }
+}
+function onClickRETURN() {
+    let canvas = document.getElementById('canvas');
+    let article = document.getElementById('IDarticle');
+    let iframe = document.getElementById('IDiframe');
+    let n1 = document.getElementById('n1');
+    let n2 = document.getElementById('n2');
 
-    console.log(itemNum)
+    canvas.classList.toggle('canvas');
+    canvas.classList.toggle('canvas-after');
+    article.classList.toggle('article');
+    article.classList.toggle('article-after');
 }
 
 // TODO: CSSに変更後のクラスを記述、Display:none
