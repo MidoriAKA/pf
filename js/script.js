@@ -90,28 +90,20 @@ function onClickABOUT() {
         canvas.classList.toggle('canvas');
         canvas.classList.toggle('canvas-click');
         canvas.classList.toggle('canvas-after');
-   
         maincenter.classList.toggle('main-center');
         maincenter.classList.toggle('main-center-after');
-   
         subwork.classList.toggle('sub');
         subwork.classList.toggle('sub-after');
-   
         subabout.classList.toggle('sub');
         subabout.classList.toggle('sub-after');
-   
         main.classList.toggle('main');
         main.classList.toggle('main-after');
-
         maintxt1.classList.toggle('main-txt1');
         maintxt1.classList.toggle('main-txt1-after');
-
         maintxt2.classList.toggle('main-txt2');
         maintxt2.classList.toggle('main-txt2-after');
-
         page.classList.toggle('page');
         page.classList.toggle('page-after');
-
         rootdiv.classList.toggle('rootdiv');
         rootdiv.classList.toggle('rootdiv-after');
     }
@@ -121,10 +113,8 @@ function onClickABOUT() {
     iframe.setAttribute('src', 'about.html')
 
     if (CurrentClassAbout == 'sub') {
-        // alert(CurrentClassAbout);
         ToggleStyle();
     } else {
-        // alert(CurrentClassAbout);
         return null;
     }
 }
@@ -142,12 +132,12 @@ function onClickMAIN() {
     let iframe = document.getElementById('IDiframe');
 
     function getClassById(elementId) {
-        let element = document.getElementById(elementId); // 要素を取得
+        let element = document.getElementById(elementId);
         if (element) {
-            var currentClass = element.className; // クラス名を取得
+            var currentClass = element.className;
             return currentClass;
         } else {
-            return null; // 要素が見つからない場合はnullを返す
+            return null;
         }
     }
 
@@ -155,42 +145,28 @@ function onClickMAIN() {
         canvas.classList.toggle('canvas');
         canvas.classList.toggle('canvas-click');
         canvas.classList.toggle('canvas-after');
-   
         maincenter.classList.toggle('main-center');
         maincenter.classList.toggle('main-center-after');
-   
         subwork.classList.toggle('sub');
         subwork.classList.toggle('sub-after');
-   
         subabout.classList.toggle('sub');
         subabout.classList.toggle('sub-after');
-   
         main.classList.toggle('main');
         main.classList.toggle('main-after');
-
         maintxt1.classList.toggle('main-txt1');
         maintxt1.classList.toggle('main-txt1-after');
-
         maintxt2.classList.toggle('main-txt2');
         maintxt2.classList.toggle('main-txt2-after');
-
         page.classList.toggle('page');
         page.classList.toggle('page-after');
-
         rootdiv.classList.toggle('rootdiv');
         rootdiv.classList.toggle('rootdiv-after');
     }
 
     let CurrentClassMain = getClassById('IDmain');
-    let CurrentClassWork = getClassById('IDsubwork');
-    let CurrentClassAbout = getClassById('IDsubabout');
-
     if (CurrentClassMain == 'main') {
         return null;
     } else if (CurrentClassMain == 'main-after') {
         ToggleStyle();
     }
-}
-function onClickITEM() {
-    console.log("aaa")
 }
