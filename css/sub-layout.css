@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --font-title: 'Zina', sans-serif;
+    --font-main: 'Public Sans', sans-serif;
+    --font-main-bold: 'Public Sans', 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-image: url("img/VvG_Wut.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+
+    position: relative;
+    min-width: 90vw;
+    min-height: 90vh;
+}
+
+.rootdiv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -47%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-title);
+    font-size: 5vw;
+}
+.main{
+    display: flex;
+    width: 80%;
+    font-family: var(--font-main);
+    font-size: 30px;
+    margin: 5px;
+}
+
+@media (max-width:700px) {
+    .rootdiv{
+        font-size: 18vw;
+    }
+    .main{
+        font-size: 30px;
+        flex-direction: column;
+    }
+}
+@media (max-width:1000px) {
+    .main{
+        flex-direction: column;
+    }
+}
+@media (max-width:1300px) {
+    .rootdiv{
+        font-size: 10vw;
+    }
+}
