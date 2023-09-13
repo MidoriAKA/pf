@@ -8,7 +8,7 @@
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.8);
 }
 body{
     background-image: url("img/VvG_Wut.jpg");
@@ -36,7 +36,7 @@ body{
     font-size: 18vw;
 }
  .separate{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     width: 80%;
     height: 5px;
  }
