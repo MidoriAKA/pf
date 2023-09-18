@@ -6,6 +6,11 @@
 :root{
     --font-title: 'Zina', sans-serif;
 }
+html,body{
+    height:100%;
+    width: 100%;
+    margin:0;
+}
 a{
     text-decoration: none;
     color: rgba(0, 0, 0, 0.8);
@@ -17,26 +22,42 @@ body{
     background-size: cover;
 
     position: relative;
-    min-width: 90vw;
-    min-height: 90vh;
 }
 
-.rootdiv{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -47%);
-    height: 100%;
-    width: 100%;
+.menu{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: var(--font-title);
-    font-size: 18vw;
+    justify-content: center;
+    height: 100%;
+    width:10%;
 }
- .separate{
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 80%;
-    height: 5px;
- }
+.menu-section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menu-text{
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    font-family: var(--font-title);
+}
+
+.menu-section input{
+    display: none;
+}
+.menu-section input[type="radio"]:checked + label {
+    color: beige;
+    font-size: 40px;
+    animation: CheckAnim 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+@keyframes CheckAnim {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.NoCheckHide{
+    display: none;
+}

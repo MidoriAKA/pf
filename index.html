@@ -10,17 +10,25 @@
     <title>PortFolio</title>
 </head>
 <body>
-    <div id="IDrootdiv" class="rootdiv">
-        <div id="IDabout" class="about">
-            <a href="https://midoriaka.github.io/about" >
-            ABOUT
-            </a>
+    <div id="IDmenu" class="menu">
+        <div class="welcome-sec menu-section menu-text">
+            <input id="IDwelcome" type="radio" name="menu" value="welcome" checked onchange="MenuSelected(this.value)">
+            <label for="IDwelcome">M<nobr id="IDwelcome-hide" class="">idori</nobr></label>
         </div>
-        <div class="separate"></div>
-        <div id="IDwork" class="work">
-            <a href="https://midoriaka.github.io/work">
-            WORK
-            </a>
+
+        <div class="about-sec menu-section menu-text">
+            <input id="IDabout" type="radio" name="menu" value="about" onchange="MenuSelected(this.value)">
+            <label for="IDabout">A<nobr id="IDabout-hide" class="NoCheckHide">bout</nobr></label>
+        </div>
+
+        <div class="work-sec menu-section menu-text">
+            <input id="IDwork" type="radio" name="menu" value="work" onchange="MenuSelected(this.value)">
+            <label for="IDwork">W<nobr id="IDwork-hide" class="NoCheckHide">ork</nobr></label>
+        </div>
+
+        <div class="contact-sec menu-section menu-text">
+            <input id="IDcontact" type="radio" name="menu" value="contact" onchange="MenuSelected(this.value)">
+            <label for="IDcontact">C<nobr id="IDcontact-hide" class="NoCheckHide">ontact</nobr></label>
         </div>
     </div>
 </body>
