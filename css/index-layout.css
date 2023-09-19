@@ -39,13 +39,9 @@ body{
     width:10%;
 }
 .menu-section{
-    position: absolute;
+    position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.welcome-sec{
-    
 }
 
 .menu-text{
@@ -60,6 +56,11 @@ body{
 .menu-section input[type="radio"]:checked + label {
     color: beige;
 }
+
+.menu-subsection{
+    position: relative;
+}
+
 span{
     display: inline-block;
     animation: CheckTxtAnim .5s cubic-bezier(.42,0,.58,1);
@@ -80,3 +81,17 @@ span{
 .NoCheckHide{
     display: none;
 }
+
+.welcome-pad-Check{
+    padding-bottom: 5rem;
+    animation: WelcomePadAnimAfter .5s cubic-bezier(.42,0,.58,1);
+}
+@keyframes WelcomePadAnimAfter {
+    from {
+        padding-bottom: 0;
+    }
+    to {
+        padding-bottom: 5rem;
+    }
+}
+.welcome-pad-noCheck 
