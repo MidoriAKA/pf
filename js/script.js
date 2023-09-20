@@ -1,115 +1,58 @@
 async function MenuSelected(Selected) {
-    function getClassById(elementId) {
-        let element = document.getElementById(elementId);
-        if (element) {
-            var currentClass = element.className;
-            return currentClass;
-        } else {
-            return null;
-        }
-    }
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       };
+    function SelectedAnim(nowSelected){
+        let SelectedVarElm = document.getElementById(`ID${nowSelected}-hide`);
+        let SelectedVar_1 = document.getElementById(`ID${nowSelected}`);
 
-    let WelcomeElm = document.getElementById('IDwelcome-hide');
-    let Welcome_1 = document.getElementById('Welcome-1');
-    let AboutElm = document.getElementById('IDabout-hide');
-    let About_1 = document.getElementById('About-1');
-    let WorkElm = document.getElementById('IDwork-hide');
-    let Work_1 = document.getElementById('Work-1');
-    let ContactElm = document.getElementById('IDcontact-hide');
-    let Contact_1 = document.getElementById('Contact-1');
-    let HasHideClass = getClassById(`ID${Selected}-hide`);
-
+        SelectedVarElm.classList.remove('NoCheckHide');
+        SelectedVarElm.classList.add('CheckAim');
+        SelectedVar_1.classList.add(`${nowSelected}-pad-Check`);
+    }
+    async function IfNotHide(HideVar) {
+        let HideVarElm = document.getElementById(`ID${HideVar}-hide`);
+        let HideVar_1 = document.getElementById(`ID${HideVar}`);
+        if (HideVarElm.classList.contains('NoCheckHide')) {
+            ;
+        } else {
+            HideVar_1.classList.remove(`${HideVar}-pad-Check`);
+            HideVar_1.classList.add(`${HideVar}-pad-noCheck`);
+            HideVarElm.classList.remove('CheckAnim');
+            HideVarElm.classList.add('unCheckAnim');
+            await sleep(500);
+            HideVar_1.classList.remove(`${HideVar}-pad-noCheck`);
+            HideVarElm.classList.remove('unCheckAnim');
+            HideVarElm.classList.add('NoCheckHide');
+        }
+    }
     switch (Selected) {
         case 'welcome':
-            WelcomeElm.classList.remove('NoCheckHide');
-            Welcome_1.classList.add('welcome-pad-Check');
-            if (AboutElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                About_1.classList.add('about-pad-noCheck');
-                await sleep(500);
-                About_1.classList.remove('about-pad-Check');
-                AboutElm.classList.add('NoCheckHide');
-                
-            }
-            if (About_1.classList.contains('about-pad-Check')) {
-               
-            } else {
-                ;
-            }
-            if (WorkElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                WorkElm.classList.add('NoCheckHide');
-            }
-
-            if (ContactElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                ContactElm.classList.add('NoCheckHide');
-            }
-
-        break;
+            SelectedAnim('welcome');
+            IfNotHide('about');
+            IfNotHide('work');
+            IfNotHide('contact');
+            break;
     
         case 'about':
-            AboutElm.classList.remove('NoCheckHide');
-            if (WelcomeElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                WelcomeElm.classList.add('NoCheckHide');
-            }
-            if (WorkElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                WorkElm.classList.add('NoCheckHide');
-            }
-            if (ContactElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                ContactElm.classList.add('NoCheckHide');
-            }
+            SelectedAnim('about');
+            IfNotHide('welcome');
+            IfNotHide('work');
+            IfNotHide('contact');
             break;
 
         case 'work':
-            WorkElm.classList.remove('NoCheckHide');
-            if (AboutElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                AboutElm.classList.add('NoCheckHide');
-            }
-            if (WelcomeElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                WelcomeElm.classList.add('NoCheckHide');
-            }
-            if (ContactElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                ContactElm.classList.add('NoCheckHide');
-            }
+            SelectedAnim('work');
+            IfNotHide('welcome');
+            IfNotHide('about');
+            IfNotHide('contact');
             break;
         
         case 'contact':
-            ContactElm.classList.remove('NoCheckHide');
-            if (AboutElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                AboutElm.classList.add('NoCheckHide');
-            }
-            if (WelcomeElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                WelcomeElm.classList.add('NoCheckHide');
-            }
-            if (WorkElm.classList.contains('NoCheckHide')) {
-                ;
-            } else {
-                WorkElm.classList.add('NoCheckHide');
-            }
+            SelectedAnim('contact');
+            IfNotHide('welcome');
+            IfNotHide('about');
+            IfNotHide('work');
             break;
     }
-    console.log(Selected);
 }

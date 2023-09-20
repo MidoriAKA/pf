@@ -30,6 +30,10 @@ body{
     position: relative;
 }
 
+label{
+    display: flex;
+}
+
 .menu{
     display: flex;
     flex-direction: column;
@@ -39,9 +43,14 @@ body{
     width:10%;
 }
 .menu-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding: 10px;
 }
 
 .menu-text{
@@ -58,40 +67,148 @@ body{
 }
 
 .menu-subsection{
-    position: relative;
+    position: absolute;
 }
 
-span{
-    display: inline-block;
-    animation: CheckTxtAnim .5s cubic-bezier(.42,0,.58,1);
-}
-@keyframes CheckTxtAnim {
-    0%{
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    60%{
-        opacity: 0.1;
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
 .NoCheckHide{
     display: none;
 }
+.CheckAnim{
+    opacity: 1;
+    animation: ShowAnim .5s cubic-bezier(.42,0,.58,1);
+}
+@keyframes ShowAnim {
+    from{
+        opacity: o;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.unCheckAnim{
+    opacity: 0;
+    animation: HideAnim .5s cubic-bezier(.42,0,.58,1);
+}
+@keyframes HideAnim {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
 
+#IDwelcome{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 .welcome-pad-Check{
-    padding-bottom: 5rem;
+    margin-bottom: 2.5em;
     animation: WelcomePadAnimAfter .5s cubic-bezier(.42,0,.58,1);
 }
 @keyframes WelcomePadAnimAfter {
     from {
-        padding-bottom: 0;
+        margin-bottom: 0;
     }
     to {
-        padding-bottom: 5rem;
+        margin-bottom: 2.5em;
     }
 }
-.welcome-pad-noCheck 
+.welcome-pad-noCheck{
+    margin-bottom: 0;
+    animation: WelcomePadAnimBefore .5s cubic-bezier(.42,0,.58,1) !important;
+}
+@keyframes WelcomePadAnimBefore {
+    from {
+        margin-bottom: 2.5em;
+    }
+    to{
+        margin-bottom: 0;
+    }
+}
+
+#IDabout{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.about-pad-Check{
+    margin-bottom: 2em;
+    animation: AboutPadAnimAfter .5s cubic-bezier(.42,0,.58,1);
+}
+@keyframes AboutPadAnimAfter {
+    from {
+        margin-bottom: 0;
+    }
+    to {
+        margin-bottom: 2em;
+    }
+}
+.about-pad-noCheck{
+    margin-bottom: 0em;
+    animation: AboutPadAnimBefore .5s cubic-bezier(.42,0,.58,1) !important;
+}
+@keyframes AboutPadAnimBefore {
+    from {
+        margin-bottom: 2em;
+    }
+    to{
+        margin-bottom: 0;
+    }
+}
+
+#IDwork{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.work-pad-Check{
+    margin-bottom: 1.5em;
+    animation: WorkPadAnimAfter .5s cubic-bezier(.42,0,.58,1);
+}
+@keyframes WorkPadAnimAfter {
+    from {
+        margin-bottom: 0;
+    }
+    to {
+        margin-bottom: 1.5em;
+    }
+}
+.work-pad-noCheck{
+    margin-bottom: 0em;
+    animation: WorkPadAnimBefore .5s cubic-bezier(.42,0,.58,1) !important;
+}
+@keyframes WorkPadAnimBefore {
+    from {
+        margin-bottom: 1.5em;
+    }
+    to{
+        margin-bottom: 0;
+    }
+}
+#IDcontact{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.contact-pad-Check{
+    margin-bottom: 3em;
+    animation: ContactPadAnimAfter .5s cubic-bezier(.42,0,.58,1);
+}
+@keyframes ContactPadAnimAfter {
+    from {
+        margin-bottom: 0;
+    }
+    to {
+        margin-bottom: 3em;
+    }
+}
+.contact-pad-noCheck{
+    margin-bottom: 0em;
+    animation: ContactPadAnimBefore .5s cubic-bezier(.42,0,.58,1) !important;
+}
+@keyframes ContactPadAnimBefore {
+    from {
+        margin-bottom: 3em;
+    }
+    to{
+        margin-bottom: 0;
+    }
+}

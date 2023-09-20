@@ -12,23 +12,49 @@
 <body>
     <div id="IDmenu" class="menu">
         <div class="menu-section menu-text">
-            <input id="IDwelcome" type="radio" name="menu" value="welcome" checked onchange="MenuSelected(this.value)">
-            <label for="IDwelcome"><span id="Welcome-1">M</span></label>
+            <div id="IDwelcome" class="welcome-pad-Check">
+            <input id="Radiowelcome" type="radio" name="menu" value="welcome" checked onchange="MenuSelected(this.value)">
+            <label for="Radiowelcome"><span id="welcome-1">M</span>
+                <nobr>
+            <div class="menu-subsection menu-text HideText">
+                <span id="IDwelcome-hide" class="">idori</span>
+            </div>
+                </nobr>
+            </label></div>
 
-            <input id="IDabout" type="radio" name="menu" value="about" onchange="MenuSelected(this.value)">
-            <label for="IDabout"><span id="About-1">A</span></label>
+            
+            <div id="IDabout">
+            <input id="Radioabout" type="radio" name="menu" value="about" onchange="MenuSelected(this.value)">
+            <label for="Radioabout"><span id="about-1">A</span>
+                <nobr>
+            <div class="menu-subsection menu-text HideText">
+                <span id="IDabout-hide" class="NoCheckHide">bout</span>
+            </div>
+                </nobr>
+            </label></div>
 
-            <input id="IDwork" type="radio" name="menu" value="work" onchange="MenuSelected(this.value)">
-            <label for="IDwork"><span id="Work-1">W</span></label>
 
-            <input id="IDcontact" type="radio" name="menu" value="contact" onchange="MenuSelected(this.value)">
-            <label for="IDcontact"><span id="Contact-1">C</span></label>
-        </div>
-        <div class="menu-subsection menu-text HideText">
-            <span id="IDwelcome-hide" class="">idori</span>
-            <span id="IDabout-hide" class="NoCheckHide">bout</span>
-            <span id="IDwork-hide" class="NoCheckHide">ork</span>
-            <span id="IDcontact-hide" class="NoCheckHide">ontact</span>
+            <div id="IDwork">
+            <input id="Radiowork" type="radio" name="menu" value="work" onchange="MenuSelected(this.value)">
+            <label for="Radiowork"><span id="work-1">W</span>
+            <nobr>
+            <div class="menu-subsection menu-text HideText">
+                <span id="IDwork-hide" class="NoCheckHide">ork</span>
+            </div>
+                </nobr>
+            </label></div>
+
+
+            <div id="IDcontact">
+            <input id="Radiocontact" type="radio" name="menu" value="contact" onchange="MenuSelected(this.value)">
+            <label for="Radiocontact"><span id="contact-1">C</span>
+                <nobr>
+            <div class="menu-subsection menu-text HideText">
+                <span id="IDcontact-hide" class="NoCheckHide">ontact</span>
+            </div>
+                </nobr>
+            </label></div>
+
         </div>
     </div>
 </body>
