@@ -5,27 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://api.fontshare.com/v2/css?f[]=zina@400&f[]=public-sans@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     <link  rel="stylesheet" type="text/css" href="css/sub-layout.css">
     <script src="js/script.js"></script>
     <title>PortFolio - about</title>
 </head>
 <body>
-    <div id="IDrootdiv" class="rootdiv">
-        ABOUT
+    <div class="rootdiv">
+        <div id="IDLanRadio" class="LanRadioRoot">
+            <div id="IDen">
+                <input id="IDenRADIO" type="radio" name="Language" value="en" checked onchange="LanSelected(this.value)">
+                <label for="IDenRADIO"><div class="LanOption"><img src="css/img/world.png" class="LanguageICON"><span id="en-txt lan-txt">en</span></div></label>
+            </div>
+            <div id="IDja">
+                <input id="IDjaRADIO" type="radio" name="Language" value="ja" onchange="LanSelected(this.value)">
+                <label for="IDjaRADIO"><div class="LanOption"><img src="css/img/world.png" class="LanguageICON"><span id="ja-txt lan-txt">ja</span></div></label>
+            </div>
+            <div id="IDpt">
+                <input id="IDptRADIO" type="radio" name="Language" value="pt" onchange="LanSelected(this.value)">
+                <label for="IDptRADIO"><div class="LanOption"><img src="css/img/world.png" class="LanguageICON"><span id="pt-txt lan-txt">pt</span></div></label>
+            </div>
+        </div>
         <div class="main">
-            en-US
-            <span class="maintxt">
+            <span id="IDenMain" class="maintxt">
                 &nbsp;I'm Lorenzo 'Midori' Yang. I am a beginner designer.<br>
                 I'm a student of systems analysis and development.<br>
                 I speak Japanese and Portuguese at a native level, and I can understand English.
             </span>
-            ja-JP
-            <span class="maintxt">
+            <span id="IDjaMain" class="maintxt HIDE">
                 &nbsp;みどりと申します。<br>
                 日本語とポルトガル語をネイティブレベルに、英語は理解ができる程度です。
             </span>
-            pt-BR
-            <span class="maintxt">
+            <span id="IDptMain" class="maintxt HIDE">
                 &nbsp;Olá, me chamo Lorenzo 'Midori' Yang.<br>
                 Eu sou estudante de Analise e desenvolcimento de sistemas.<br>
                 Falo Japonês e Português no nível nativo, e inglês no nível intermediário.

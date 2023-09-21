@@ -5,73 +5,57 @@
 }
 :root{
     --font-title: 'Zina', sans-serif;
-    --font-main: 'Public Sans', sans-serif;
+    --font-main: "M PLUS Rounded 1c";
 }
 a{
     text-decoration: none;
     color: black;
 }
-body{
-    position: relative;
-    min-width: 90vw;
-    min-height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 7, 37, 0.8), rgba(0, 0, 0, 0.3)),
-    url(img/VvG_Wut.jpg);
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-}
-.rootdiv{
-    position: relative;
+html,body{
     height: 100%;
     width: 100%;
-    display: grid;
-    justify-items: center;
+    margin: 0;
+}
+.rootdiv{
+    margin: 10px;
+    color: #202020;
+    font-size: 30px;
+    font-family: var(--font-main);
+}
+#IDLanRadio{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.LanRadioRoot input{
+    display: none;
+}
+.LanRadioRoot input[type="radio"]:checked + label{
+    color: red;
+}
+.LanguageICON{
+    width: 1em;
+    height: 1em;
+}
+.LanSelected{
     background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: #ffffff96;
-    font-family: var(--font-title);
-    font-size: 5vw;
 }
-.maintxt{
-    margin: 10px;
-    font-size: 30px;
+.LanOption{
+    display: flex;
+    align-items: center;
+    border: 2px solid #202020;
+    border-radius: 5px;
+    padding: 3px;
 }
 .main{
-    display: grid;
-    justify-items: center;
-    width: 80%;
-    font-family: var(--font-main);
-    font-size: 50px;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (max-width:1300px) {
-    .rootdiv{
-        font-size: 10vw;
-    }
-}
-@media (max-width:1000px) {
-    .main{
-    }
-}
-@media (max-width:700px) {
-    .rootdiv{
-        font-size: 20vw;
-    }
-    .main{
-        font-size: 50px;
-    }
-    .maintxt{
-        font-size: 30px;
-    }
-}
-@media (max-width:500px) {
-    .rootdiv{
-        font-size: 20vw;
-    }
+.HIDE{
+    display: none;
 }
