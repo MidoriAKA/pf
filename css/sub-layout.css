@@ -18,7 +18,7 @@ html,body{
 }
 .rootdiv{
     margin: 10px;
-    color: #202020;
+    color: beige;
     font-size: 30px;
     font-family: var(--font-main);
 }
@@ -36,6 +36,23 @@ html,body{
 .LanguageICON{
     width: 1em;
     height: 1em;
+    margin-right: 2.5px;
+}
+.LanOption{
+    display: flex;
+    align-items: center;
+    border: 2px solid beige;
+    font-family: 'Anton', sans-serif;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-shadow: 0 2px 2px #202020;
+
+    background-image: url("img/VvG_Wut.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
 }
 .LanSelected{
     background-image: url("img/VvG_Wut.jpg");
@@ -43,17 +60,11 @@ html,body{
     background-position: center center;
     background-size: cover;
 }
-.LanOption{
-    display: flex;
-    align-items: center;
-    border: 2px solid #202020;
-    border-radius: 5px;
-    padding: 3px;
-}
 .main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
 .HIDE{
