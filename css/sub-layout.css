@@ -46,7 +46,7 @@ html,body{
 .LanOption{
     display: flex;
     align-items: center;
-    border: 2px solid #202020;
+    border: 2px solid beige;
     border-radius: 5px;
     padding: 3px;
 }

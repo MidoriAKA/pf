@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://api.fontshare.com/v2/css?f[]=zina@400&display=swap" rel="stylesheet">
-    <link  rel="stylesheet" type="text/css" href="css/index-layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- font - https://fonts.google.com/specimen/Major+Mono+Display?preview.size=51 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet"><!-- font -->
+    <link rel="stylesheet" type="text/css" href="css/index-layout.css">
     <script src="js/script.js"></script>
     <title>PortFolio</title>
 </head>
 <body>
     <div class="root">
         <div class="menu-section menu-text">
-            <div id="IDwelcome" class="welcome-pad-Check">
-            <input id="Radiowelcome" type="radio" name="menu" value="welcome" checked onchange="MenuSelected(this.value)">
-            <label for="Radiowelcome"><span id="welcome-1">M</span>
-                <nobr>
-            <div class="menu-subsection menu-text HideText">
-                <span id="IDwelcome-hide" class="">idori</span>
+            <div id="IDwelcome" class="menu-contents welcome-pad-Check">
+                <input id="Radiowelcome" type="radio" name="menu" value="welcome" checked onchange="MenuSelected(this.value)">
+                <label for="Radiowelcome"> 
+                    <span id="welcome-1">M</span>
+                    <nobr>
+                    <div class="menu-subsection menu-text HideText">
+                        <span id="IDwelcome-hide" class="">idori</span>
+                    </div>
+                    </nobr>
+                </label>
             </div>
-                </nobr>
-            </label></div>
 
             
-            <div id="IDabout">
+            <div id="IDabout" class="menu-contents ">
             <input id="Radioabout" type="radio" name="menu" value="about" onchange="MenuSelected(this.value)">
             <label for="Radioabout"><span id="about-1">A</span>
                 <nobr>
@@ -34,7 +38,7 @@
             </label></div>
 
 
-            <div id="IDwork">
+            <div id="IDwork" class="menu-contents ">
             <input id="Radiowork" type="radio" name="menu" value="work" onchange="MenuSelected(this.value)">
             <label for="Radiowork"><span id="work-1">W</span>
             <nobr>
@@ -45,9 +49,9 @@
             </label></div>
 
 
-            <div id="IDcontact">
+            <div id="IDcontact" class="menu-contents ">
             <input id="Radiocontact" type="radio" name="menu" value="contact" onchange="MenuSelected(this.value)">
-            <label for="Radiocontact"><span id="contact-1">C</span>
+            <label for="Radiocontact"><span id="contact-1">c</span>
                 <nobr>
             <div class="menu-subsection menu-text HideText">
                 <span id="IDcontact-hide" class="NoCheckHide">ontact</span>
