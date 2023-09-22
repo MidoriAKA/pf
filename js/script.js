@@ -56,33 +56,41 @@ async function MenuSelected(Selected) {
             break;
     }
 }
-function LanSelected(Selected) {
+function LangSelected(Selected) {
     function ShowSelected(nowSelected){
         let SelectedVarElem = document.getElementById(`ID${nowSelected}Main`);
         let SelectedVarRadio = document.getElementById(`ID${nowSelected}`);
-        let SelectedVarDiv = SelectedVarRadio.querySelector('.LanOption');
-
-
-        console.log(SelectedVarRadio);
-        console.log(SelectedVarDiv);
-        SelectedVarDiv.classList.remove('LanOption');
-
-        SelectedVarDiv.classList.add('LanSelected');
+        let SelectedVarDiv = SelectedVarRadio.querySelector('.LangOption');
+        let SelectedVarIcon = document.getElementById(`${nowSelected}IMG`);
+        
+        SelectedVarIcon.classList.add('LanguageICON');
+        SelectedVarIcon.classList.remove('LanguageICON-OFF');
+        
+        SelectedVarDiv.classList.remove('LangOption');
+        SelectedVarDiv.classList.add('LangSelected');
         SelectedVarElem.classList.remove('HIDE');
     }
     function HideOther(check){
         let HideVar = document.getElementById(`ID${check}Main`);
         let HideVarRadio = document.getElementById(`ID${check}`);
-        let HideVarDiv = HideVarRadio.querySelector('.LanOption');
+        let HideVarDiv_Selected = HideVarRadio.querySelector('.LangSelected');
+        let HideVarIcon = document.getElementById(`${check}IMG`);
         if (HideVar.classList.contains('HIDE')) {
             ;
         } else {
-            HideVarDiv.classList.remove('LanSelected');
-            HideVarDiv.classList.add('LanOption');
             HideVar.classList.add('HIDE');
         }
-        if (HideVarDiv.classList.contains('LanSelected')) {
-            // TODO
+        if (HideVarDiv_Selected) {
+            HideVarDiv_Selected.classList.remove('LangSelected');
+            HideVarDiv_Selected.classList.add('LangOption');
+        } else {
+            ;
+        }
+        if (HideVarIcon.classList.contains('LanguageICON')) {
+            HideVarIcon.classList.remove('LanguageICON');
+            HideVarIcon.classList.add('LanguageICON-OFF');
+        } else {
+            ;
         }
     }
     switch (Selected) {

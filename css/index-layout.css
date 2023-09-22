@@ -279,8 +279,7 @@ label{
     border-width: 0;
     background-color: #202020;
 }
-/* --------------------------------------------------------------------------------- */
-
+/* ----------------------------------------SECTION----------------------------------------- */
 .rootdiv{
     margin: 10px;
     color: #202020;
@@ -294,38 +293,62 @@ label{
     font-size: 25px;
     font-family: var(--font-title);
     font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .LanRadioRoot input{
     display: none;
 }
 .LanRadioRoot input[type="radio"]:checked + label{
-    color: red;
+    color: #202020;
 }
+/* --------------------------------------------------------------------------------- */
 .LanguageICON{
     width: 1em;
     height: 1em;
+    padding: 2.5px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
 }
-.LanSelected{
-background-color: beige;
+.LanguageICON-OFF {
+    width: 1em;
+    height: 1em;
+    padding: 2.5px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    filter: invert(100%) !important;
 }
-.LanOption{
+.LangSelected{
     display: flex;
     align-items: center;
+    padding: 3px;
+    border-radius: 5px;
+
+    box-shadow: 0px 0px 5px 1px beige;
+    background-color: beige;
+}
+.LangOption{
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 5px;
 
     background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 
-    border: 2px solid rgba(0, 0, 0, 0);
-    border-radius: 5px;
-    padding: 3px;
+    box-shadow: 1px 1px 1px 0px beige;
 }
+/* --------------------------------------------------------------------------------- */
 .main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 20px;
 }
 .maintxt{
     color: beige;
