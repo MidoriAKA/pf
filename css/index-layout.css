@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 :root{
-    --font-title: 'Zina', sans-serif;
+    --font-title: 'Major Mono Display', monospace;
 }
 html,body{
     height:100%;
@@ -19,22 +19,17 @@ html,body{
     
     position: relative;
 }
-a{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.8);
-}
 body{
-    /* background-color: rgb(20, 20, 20); */
-    background-image: url("img/VvG_Wut.jpg");
+    background-color: #202020;
+    /* background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
-    background-size: cover;
+    background-size: cover; */
 }
-
 label{
     display: flex;
 }
-
+/* ------------------------------------------------------------------------------ */
 .root{
     display: flex;
     flex-direction: row;
@@ -50,41 +45,71 @@ label{
     height: 100%;
     width:calc(10%);
     margin-left: 10px;
-}
-.menu-text{
-    writing-mode: vertical-rl;
-    font-size: 40px;
-    font-family: var(--font-title);
-    color: beige;
-    text-shadow: 0 2px 2px #202020;
-}
-.HideText{
-    color: rgba(245, 245, 220, 1);
+
+
 }
 .menu-section input{
     display: none;
 }
 .menu-section input[type="radio"]:checked + label {
-    color: rgba(245, 245, 220, 1);
+    color: beige;
+    text-shadow: 0 0px 5px beige;
     animation: ShowAnim .5s cubic-bezier(.42,0,.58,1);
 }
+.menu-text{
+    writing-mode: vertical-rl;
+    font-size: 40px;
+    font-family: var(--font-title);
+    font-weight: bolder;
+}
+.menu-contents{
+    position: relative;
+    border-radius: 0px 20px 20px 0px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    background-image: url("img/VvG_Wut.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+}
+/* ------------------------------------------------------------------------------ */
 .menu-subsection{
     position: absolute;
+    font-size: 30px;
+    left: 2px;
 }
 .NoCheckHide{
     display: none;
 }
 .CheckAnim{
-    color: rgba(245, 245, 220, 1);
+    background-image: url("img/VvG_Wut.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0 0px 5px beige;
+    color: beige;
     animation: ShowAnim .5s cubic-bezier(.42,0,.58,1);
 }
 @keyframes ShowAnim {
-    from{
-        color: rgba(245, 245, 220, 1);
-        /* color: rgb(20, 20, 20); */
+    0%{
+        color: rgba(0, 0, 0, 0);
+        text-shadow: 0 0px 5px rgba(0, 0, 0, 0);
     }
-    to{
-        color: rgba(245, 245, 220, 1);
+    10%{
+        
+        text-shadow: 0 0px 10px white;
+    }
+    25%{
+        color: rgb(182, 182, 163);
+    }
+    100%{
+        color: beige;
+        text-shadow: 0 0px 5px beige;
     }
 }
 .unCheckAnim{
@@ -99,19 +124,13 @@ label{
         opacity: 0;
     }
 }
-#IDwelcome{
-    padding-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 10px 0px 0px 10px;
-    border: 5px solid rgb(20, 20, 20);
-}
+/* ------------------------------------------------------------------------------ */
 .welcome-pad-Check{
-    /* background-image: url("img/VvG_Wut.jpg");
+    background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    background-blend-mode:color-burn; */
-    /* background-color: rgb(20, 20, 20); */
+    background-blend-mode:color-burn;
     padding-bottom: calc(2.5em + 10px);
     animation: WelcomePadAnimAfter .5s cubic-bezier(.42,0,.58,1);
 }
@@ -138,18 +157,13 @@ label{
         padding-bottom: 0;
     }
 }
-#IDabout{
-    padding-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 10px 0px 0px 10px;
-}
+/* ------------------------------------------------------------------------------ */
 .about-pad-Check{
-    /* background-image: url("img/VvG_Wut.jpg");
+    background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
-    background-size: cover; */
-    background-color: rgb(20, 20, 20);
-    padding-bottom: calc(2.5em + 10px);
+    background-size: cover;
+    padding-bottom: calc(2em + 10px);
     animation: AboutPadAnimAfter .5s cubic-bezier(.42,0,.58,1);
 }
 @keyframes AboutPadAnimAfter {
@@ -157,7 +171,7 @@ label{
         padding-bottom: 0;
     }
     to {
-        padding-bottom: calc(2.5em + 10px);
+        padding-bottom: calc(2em + 10px);
     }
 }
 .about-pad-noCheck{
@@ -166,23 +180,18 @@ label{
 }
 @keyframes AboutPadAnimBefore {
     from {
-        padding-bottom: calc(2.5em + 10px);
+        padding-bottom: calc(2em + 10px);
     }
     to{
         padding-bottom: 0;
     }
 }
-#IDwork{
-    padding-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 10px 0px 0px 10px;
-}
+/* ------------------------------------------------------------------------------ */
 .work-pad-Check{
-    /* background-image: url("img/VvG_Wut.jpg");
+    background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
-    background-size: cover; */
-    background-color: rgb(20, 20, 20);
+    background-size: cover;
     padding-bottom: calc(2em + 10px);
     animation: WorkPadAnimAfter .5s cubic-bezier(.42,0,.58,1);
 }
@@ -206,17 +215,12 @@ label{
         padding-bottom: 0;
     }
 }
-#IDcontact{
-    padding-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 10px 0px 0px 10px;
-}
+/* ------------------------------------------------------------------------------ */
 .contact-pad-Check{
-    /* background-image: url("img/VvG_Wut.jpg");
+    background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
-    background-size: cover; */
-    background-color: rgb(20, 20, 20);
+    background-size: cover;
     padding-bottom: calc(3.5em + 10px);
     animation: ContactPadAnimAfter .5s cubic-bezier(.42,0,.58,1);
 }
@@ -240,14 +244,12 @@ label{
         padding-bottom: 0;
     }
 }
-
+/* --------------------------------------------------------------------------------- */
 .section-root{
-    /* background-image: url("img/VvG_Wut.jpg");
+    background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
-    background-size: cover; */
-    
-    background-color: rgb(20, 20, 20);
+    background-size: cover;
     position: relative;
     display: flex;
     height: calc(100% - 20px);
@@ -255,29 +257,79 @@ label{
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
-    border-radius: 5px 20px 20px 5px;
+    border-radius: 10px;
+    backdrop-filter: brightness(10%) !important;
     z-index: 1;
 }
 .section{
-    background-image: url("img/VvG_Wut.jpg");
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
     display: grid;
     justify-items: center;
     align-items: center;
     height: calc(100% - 20px);
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     margin: 10px;
-    
-    background-clip: border-box;
-    border-radius: 5px 20px 20px 5px;
+    border-radius: 10px;
+    border: 5px solid #202020;
 }
 #IDSectionFrame{
     height: calc(100% - 10px);
     width: calc(100% - 10px);
     padding: 5px;
-    border-radius: 5px 20px 20px 5px;
+    border-radius: 10px;
     border-width: 0;
-    background-color: rgb(20, 20, 20);
+    background-color: #202020;
+}
+/* --------------------------------------------------------------------------------- */
+
+.rootdiv{
+    margin: 10px;
+    color: #202020;
+    font-size: 30px;
+    font-family: var(--font-main);
+}
+#IDLanRadio{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 25px;
+    font-family: var(--font-title);
+    font-weight: bold;
+}
+.LanRadioRoot input{
+    display: none;
+}
+.LanRadioRoot input[type="radio"]:checked + label{
+    color: red;
+}
+.LanguageICON{
+    width: 1em;
+    height: 1em;
+}
+.LanSelected{
+background-color: beige;
+}
+.LanOption{
+    display: flex;
+    align-items: center;
+
+    background-image: url("img/VvG_Wut.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-clip: border-box;
+
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.maintxt{
+    color: beige;
+}
+.HIDE{
+    display: none;
 }

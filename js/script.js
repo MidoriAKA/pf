@@ -7,7 +7,7 @@ async function MenuSelected(Selected) {
         let SelectedVar_1 = document.getElementById(`ID${nowSelected}`);
 
         SelectedVarElm.classList.remove('NoCheckHide');
-        SelectedVarElm.classList.add('CheckAim');
+        SelectedVarElm.classList.add('CheckAnim');
         SelectedVar_1.classList.add(`${nowSelected}-pad-Check`);
     }
     async function IfNotHide(HideVar) {
@@ -59,14 +59,30 @@ async function MenuSelected(Selected) {
 function LanSelected(Selected) {
     function ShowSelected(nowSelected){
         let SelectedVarElem = document.getElementById(`ID${nowSelected}Main`);
+        let SelectedVarRadio = document.getElementById(`ID${nowSelected}`);
+        let SelectedVarDiv = SelectedVarRadio.querySelector('.LanOption');
+
+
+        console.log(SelectedVarRadio);
+        console.log(SelectedVarDiv);
+        SelectedVarDiv.classList.remove('LanOption');
+
+        SelectedVarDiv.classList.add('LanSelected');
         SelectedVarElem.classList.remove('HIDE');
     }
     function HideOther(check){
         let HideVar = document.getElementById(`ID${check}Main`);
+        let HideVarRadio = document.getElementById(`ID${check}`);
+        let HideVarDiv = HideVarRadio.querySelector('.LanOption');
         if (HideVar.classList.contains('HIDE')) {
             ;
         } else {
+            HideVarDiv.classList.remove('LanSelected');
+            HideVarDiv.classList.add('LanOption');
             HideVar.classList.add('HIDE');
+        }
+        if (HideVarDiv.classList.contains('LanSelected')) {
+            // TODO
         }
     }
     switch (Selected) {
