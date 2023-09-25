@@ -60,13 +60,13 @@ function LangSelected(Selected) {
     function ShowSelected(nowSelected){
         let SelectedVarElem = document.getElementById(`ID${nowSelected}Main`);
         let SelectedVarRadio = document.getElementById(`ID${nowSelected}`);
-        let SelectedVarDiv = SelectedVarRadio.querySelector('.LangOption');
+        let SelectedVarDiv = SelectedVarRadio.querySelector('.LangNotSelected');
         let SelectedVarIcon = document.getElementById(`${nowSelected}IMG`);
         
         SelectedVarIcon.classList.add('LanguageICON');
         SelectedVarIcon.classList.remove('LanguageICON-OFF');
         
-        SelectedVarDiv.classList.remove('LangOption');
+        SelectedVarDiv.classList.remove('LangNotSelected');
         SelectedVarDiv.classList.add('LangSelected');
         SelectedVarElem.classList.remove('HIDE');
     }
@@ -82,7 +82,7 @@ function LangSelected(Selected) {
         }
         if (HideVarDiv_Selected) {
             HideVarDiv_Selected.classList.remove('LangSelected');
-            HideVarDiv_Selected.classList.add('LangOption');
+            HideVarDiv_Selected.classList.add('LangNotSelected');
         } else {
             ;
         }

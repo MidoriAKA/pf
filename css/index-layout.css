@@ -299,9 +299,9 @@ label{
 .LanRadioRoot input{
     display: none;
 }
-.LanRadioRoot input[type="radio"]:checked + label{
+/* .LanRadioRoot input[type="radio"]:checked + label{
     color: #202020;
-}
+} */
 /* --------------------------------------------------------------------------------- */
 .LanguageICON{
     width: 1em;
@@ -323,11 +323,31 @@ label{
     align-items: center;
     padding: 3px;
     border-radius: 5px;
-
-    box-shadow: 0px 0px 5px 1px beige;
+    
     background-color: beige;
+    /* box-shadow: 0px 0px 5px 1px beige; */
+    
+    box-shadow: 1px 1px 5px 0px #202020 inset;
+    border: 1px solid beige;
+    border-top-width: 1;
+    border-left-width: 1;
+    animation: LangAnim .5s cubic-bezier(.42,0,.58,1);
 }
-.LangOption{
+@keyframes LangAnim {
+    0%{
+        background-color: #202020;
+        box-shadow: 2px 2px 5px 0px #202020 inset;
+    }
+    10%{
+    }
+    25%{
+        color: #202020;
+    }
+    100%{
+        /* text-shadow: 0 0px 5px beige; */
+    }
+}
+.LangNotSelected{
     display: flex;
     align-items: center;
     padding: 3px;
@@ -341,7 +361,7 @@ label{
     -webkit-background-clip: text;
     color: transparent;
 
-    box-shadow: 1px 1px 1px 0px beige;
+    box-shadow: 1px 1px 0px 0px beige;
 }
 /* --------------------------------------------------------------------------------- */
 .main{
@@ -352,6 +372,9 @@ label{
 }
 .maintxt{
     color: beige;
+}
+.maintxt-title{
+    font-size: larger;
 }
 .HIDE{
     display: none;
