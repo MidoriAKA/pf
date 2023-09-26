@@ -395,23 +395,18 @@ label{
     -webkit-background-clip: text;
     color: transparent;
 }
-.Span-Big{
+.Slogan-Big{
     font-family: 'Yuji Boku', serif;
     font-size: 100px;
     line-height: .9;
     margin-bottom: 10px;
 }
-.Span-Small{
+.Slogan-Small{
     font-family: 'Caveat', cursive;
     font-size: 30px;
 }
-@media screen and (min-width:400px) {
-    .Span-Big{
+@media (279px <= width <= 400px) {
+    .Slogan-Big{
         font-size: 70px;
-    }
-}
-@media screen and (min-width:509px) {
-    .Span-Big{
-        font-size: 100px;
     }
 }
