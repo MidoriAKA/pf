@@ -387,6 +387,8 @@ label{
     height: 100%;
     width: 100%;
     text-align: center;
+}
+.Slogan-Big{
     background-image: url("img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
@@ -394,13 +396,25 @@ label{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-}
-.Slogan-Big{
     font-family: 'Yuji Boku', serif;
     font-size: 100px;
     line-height: .9;
     margin-bottom: 10px;
+
+    animation: big-animation 2s infinite;
 }
+@keyframes big-animation {
+    0%{
+        opacity: .7;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .7;
+    }
+}
+
 .Slogan-Small{
     font-family: 'Caveat', cursive;
     font-size: 30px;
