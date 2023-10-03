@@ -1,25 +1,19 @@
 window.onload = function(){
     let Slogan_big = document.querySelectorAll('.Slogan-Big');
     let num = 0
-    Slogan_big.forEach((VarText) => {
+    let strs = '';
+    Slogan_big.forEach((VarText, i) => {
         let html = '';
-        let strs = VarText.textContent.split('');
-        strs.forEach((str, i) => {
+        strs = VarText.textContent.split('');
+        strs.forEach((str, num) => {
             let replacedStr = str.replace(/\s|&nbsp;/g);
-            num = i + 1;
             html += `<span class='Slogan-Big anim${num}'>${replacedStr}</span>`;
         });
+        strs += `anim${num}`
+        num = i + 1;
         VarText.innerHTML = html;
     });
-    let Slogan_small = document.querySelectorAll('Slogan-small');
-    // Slogan_small.forEach((VarText_small) => {
-    //     let html_s = '';
-    //     let strs_s = VarText_small.split('');
-    //     strs_s.forEach((str_s)) => {
-
-    //     }
-
-    // })
+    
     }
     // let Slogan_big_Text = Slogan_big.innerHTML;
     // let Slogan_big_len = Slogan_big_Text.length;

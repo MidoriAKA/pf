@@ -26,9 +26,14 @@ async function MenuSelected(Selected) {
             HideVarElm.classList.add('NoCheckHide');
         }
     }
+    function ToggleSelectedMenu(MenuVar) {
+        let SectionFeame = document.getElementById('IDSectionFrame');
+        SectionFeame.setAttribute('src', `${MenuVar}.html`);
+    }
     switch (Selected) {
         case 'welcome':
             SelectedAnim('welcome');
+            ToggleSelectedMenu('welcome');
             IfNotHide('about');
             IfNotHide('work');
             IfNotHide('contact');
@@ -36,6 +41,7 @@ async function MenuSelected(Selected) {
     
         case 'about':
             SelectedAnim('about');
+            ToggleSelectedMenu('about');
             IfNotHide('welcome');
             IfNotHide('work');
             IfNotHide('contact');
@@ -43,6 +49,7 @@ async function MenuSelected(Selected) {
 
         case 'work':
             SelectedAnim('work');
+            ToggleSelectedMenu('work');
             IfNotHide('welcome');
             IfNotHide('about');
             IfNotHide('contact');
@@ -50,6 +57,7 @@ async function MenuSelected(Selected) {
         
         case 'contact':
             SelectedAnim('contact');
+            ToggleSelectedMenu('contact');
             IfNotHide('welcome');
             IfNotHide('about');
             IfNotHide('work');
