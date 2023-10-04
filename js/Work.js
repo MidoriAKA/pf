@@ -1,8 +1,8 @@
 window.onload = function(){
     function readJSON(){
-        var f = "js/article.json";
-        var retJson;
-        var obj = new XMLHttpRequest();
+        let f = "js/article.json";
+        let retJson;
+        let obj = new XMLHttpRequest();
         obj.open( 'get', f, false );
         obj.onload = function() {
           try {
@@ -14,43 +14,35 @@ window.onload = function(){
         obj.send(null);
         return retJson;
       }
-    let ArticleData = readJSON();
-    console.log(ArticleData)
-
-    ArticleRoot = document.getElementById('IDWorkRoot');
-    ArticleData.forEach((element) => {
-        
+    let ArticleDataOBJ = readJSON();
+    let ArticleData = ArticleDataOBJ.article;
+    let ArticleRoot = document.getElementById('IDWorkRoot');
+    let fragment = document.createDocumentFragment();
+    ArticleData.forEach(element => {
+        let DOMarticle = document.createElement('article');
+        DOMarticle.id = `IDArticle-${element.id}`;
+        DOMarticle.className = 'Work-article';
+        let DOMdiv = document.createElement('div');
+        DOMdiv.className = 'Work-article-background';
+        let DOMsection = document.createElement('section');
+        let DOMimg = document.createElement('img');
+        DOMimg.src = element.thumb;
+        DOMimg.className = 'article-thumb';
+        let DOMspan = document.createElement('span');
+        DOMspan.textContent = element.title;
+        DOMspan.className = 'Work-article-title';
+        DOMsection.appendChild(DOMimg);
+        DOMdiv.appendChild(DOMsection);
+        DOMdiv.appendChild(DOMspan);
+        DOMarticle.appendChild(DOMdiv);
+        fragment.appendChild(DOMarticle);
     });
-
-        let article = document.getElementsByClassName('Work-article');
-        for (let i = 0; i < article.length; i++) {
-            article[i].addEventListener('click', function() {
-                let ThisID = this.id;
-                console.log(ThisID);
+    ArticleRoot.appendChild(fragment);
+    let article = document.getElementsByClassName('Work-article');
+    for (let i = 0; i < article.length; i++) {
+        article[i].addEventListener('click', function() {
+            let ThisID = this.id;
+            console.log(ThisID);
             });
         };
     }
-    // let Slogan_big = document.querySelectorAll('.Slogan-Big');
-    // let num = 0
-    // let strs = '';
-    // Slogan_big.forEach((VarText, i) => {
-    //     let html = '';
-    //     strs = VarText.textContent.split('');
-    //     strs.forEach((str, num) => {
-    //         let replacedStr = str.replace(/\s|&nbsp;/g);
-    //         html += `<span class='Slogan-Big anim${num}'>${replacedStr}</span>`;
-    //     });
-    //     strs += `anim${num}`
-    //     num = i + 1;
-    //     VarText.innerHTML = html;
-    // });
-
-    // let Slogan_big_Text = Slogan_big.innerHTML;
-    // let Slogan_big_len = Slogan_big_Text.length;
-    // console.log(Slogan_big_len);
-    // for (let i = 0; i < Slogan_big_len; i++) {
-    //     let char = Slogan_big_Text.charAt(i);
-    //     let span = document.createElement('span');
-    //     span.textContent = char;
-    //     span.style.animationDelay = i * 100 + 'ms';
-    //     Slogan_big.appendChild(span);
