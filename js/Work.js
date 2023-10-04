@@ -20,17 +20,17 @@ window.onload = function(){
     let fragment = document.createDocumentFragment();
     ArticleData.forEach(element => {
         let DOMarticle = document.createElement('article');
-        DOMarticle.id = `IDArticle-${element.id}`;
-        DOMarticle.className = 'Work-article';
+          DOMarticle.id = `IDArticle-${element.id}`;
+          DOMarticle.className = 'Work-article';
         let DOMdiv = document.createElement('div');
-        DOMdiv.className = 'Work-article-background';
+          DOMdiv.className = 'Work-article-background';
         let DOMsection = document.createElement('section');
         let DOMimg = document.createElement('img');
-        DOMimg.src = element.thumb;
-        DOMimg.className = 'article-thumb';
+          DOMimg.src = element.thumb;
+          DOMimg.className = 'article-thumb';
         let DOMspan = document.createElement('span');
-        DOMspan.textContent = element.title;
-        DOMspan.className = 'Work-article-title';
+          DOMspan.textContent = element.title;
+          DOMspan.className = 'Work-article-title';
         DOMsection.appendChild(DOMimg);
         DOMdiv.appendChild(DOMsection);
         DOMdiv.appendChild(DOMspan);
@@ -41,8 +41,7 @@ window.onload = function(){
     let article = document.getElementsByClassName('Work-article');
     for (let i = 0; i < article.length; i++) {
         article[i].addEventListener('click', function() {
-            let ThisID = this.id;
-            console.log(ThisID);
+            window.open(ArticleData[i].link)
             });
         };
     }

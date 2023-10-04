@@ -2,10 +2,12 @@
     "article": [{
         "id": 1,
         "title": "1st site - Portofolio-",
-        "thumb": "css/img/article_1.png"
+        "thumb": "../img/article_1.png",
+        "link": "https://midoriaka.github.io/1stSta/1st-index.html"
     },{
         "id": 2,
-        "title": "GLPI browser extension",
-        "thumb": "css/img/article_2.png"
+        "title": "Browser extension for GLPI",
+        "thumb": "../img/article_2.png",
+        "link": "https://github.com/MidoriAKA/Glpi-Notice"
     }]
 }

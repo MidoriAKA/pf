@@ -21,7 +21,7 @@ html,body{
 }
 body{
     background-color: #202020;
-    /* background-image: url("img/VvG_Wut.jpg");
+    /* background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover; */
@@ -67,7 +67,7 @@ label{
     border-radius: 0px 20px 20px 0px;
     padding-top: 5px;
     margin-bottom: 5px;
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -85,7 +85,7 @@ label{
     display: none;
 }
 .CheckAnim{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -126,7 +126,7 @@ label{
 }
 /* ------------------------------------------------------------------------------ */
 .welcome-pad-Check{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -159,7 +159,7 @@ label{
 }
 /* ------------------------------------------------------------------------------ */
 .about-pad-Check{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -188,7 +188,7 @@ label{
 }
 /* ------------------------------------------------------------------------------ */
 .work-pad-Check{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -217,7 +217,7 @@ label{
 }
 /* ------------------------------------------------------------------------------ */
 .contact-pad-Check{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -246,7 +246,7 @@ label{
 }
 /* --------------------------------------------------------------------------------- */
 .section-root{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -353,7 +353,7 @@ label{
     padding: 3px;
     border-radius: 5px;
 
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -389,7 +389,7 @@ label{
     text-align: center;
 }
 .Slogan-Big{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -402,7 +402,7 @@ label{
     padding-bottom: 10px;
 }
 .Slogan-Small{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -427,7 +427,7 @@ label{
     height: 100%;
 }
 .Work-article{
-    background-image: url("img/VvG_Wut.jpg");
+    background-image: url("../img/VvG_Wut.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -436,15 +436,17 @@ label{
     justify-content: center;
     margin: 10px;
     width: 80%;
-    height: 30%;
+    height: auto;
+    padding: 5px;
     border-radius: 5px;
 }
 .Work-article-background{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
-    height: 95%;
+    width: auto;
+    height: auto;
+    padding: 5px;
     background-color: #202020 !important;
 }
 .Work-article section{
